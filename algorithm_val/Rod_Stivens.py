@@ -22,5 +22,5 @@ def DividingPoint(array3):
         return number2
     else:
         return number3
-print(DividingPoint([1,2,65,435,4,2,1,4,35,4,5,6,6,4,2]))
+print(DividingPoint([1,2,65,435,4,2,1,4,35,]))
     
