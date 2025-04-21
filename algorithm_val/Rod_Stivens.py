@@ -22,5 +22,9 @@ def DividingPoint(array3):
         return number2
     else:
         return number3
-print(DividingPoint([1,2,65,435,4,2,2,3,4,5,6,7,4]))
-    
+def GCD(a,b):
+    while b != 0:
+        remainder = a % b
+        a = b
+        b = remainder
+    return a
