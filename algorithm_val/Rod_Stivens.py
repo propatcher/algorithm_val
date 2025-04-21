@@ -1,3 +1,4 @@
+import math
 def FindLargest(array1):
     largest = array1[0] # O(1)
     for i in range(len(array1)): #O(n)
@@ -27,4 +28,20 @@ def GCD(a,b):
         remainder = a % b
         a = b
         b = remainder
-    return a
+    return a    
+def FindFactors(number):
+    factors = []
+    while number % 2 == 0:
+        factors.append(2)
+        number //= 2
+    i = 3
+    max_factor = math.isqrt(number)
+    while i <= max_factor:
+        while number % i == 0:
+            factors.append(i)
+            number //= i
+            max_factor = math.isqrt(number)
+        i += 2
+    if number > 1:
+        factors.append(number)
+    return factors
