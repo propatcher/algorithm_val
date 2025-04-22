@@ -1,4 +1,5 @@
 import math
+import random
 def FindLargest(array1):
     largest = array1[0] # O(1)
     for i in range(len(array1)): #O(n)
@@ -72,3 +73,10 @@ def deal_cards(players, cards_per_player=5):
     
     return hands
 """
+def MonteCarlo(target, num_rolls):
+    successes = 0
+    for _ in range(num_rolls):
+        roll = random.randint(1, 6)
+        if roll == target:
+            successes += 1
+    return successes / num_rolls
