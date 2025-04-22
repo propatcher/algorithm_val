@@ -75,8 +75,8 @@ def deal_cards(players, cards_per_player=5):
 """
 def MonteCarlo(target, num_rolls):
     successes = 0
-    for _ in range(num_rolls):
-        roll = random.randint(1, 6)
-        if roll == target:
+    for _ in range(num_rolls): #Перебор в количество бросков
+        roll = random.randint(1, 6) #cлучайное значение между 1 и 6
+        if roll == target: #если бросок который нам нужен к успешным добавляется один соответственно 
             successes += 1
-    return successes / num_rolls
+    return successes / num_rolls #успешные броски делятся на сумму всех бросков и получается вероятность по методике Монте Карло
