@@ -73,7 +73,7 @@ def deal_cards(players, cards_per_player=5):
     
     return hands
 """
-def MonteCarlo(target, num_rolls):
+def MonteCarlo(target, num_rolls): #соответственно чем больше бросков тем точнее результат
     successes = 0
     for _ in range(num_rolls): #Перебор в количество бросков
         roll = random.randint(1, 6) #cлучайное значение между 1 и 6
